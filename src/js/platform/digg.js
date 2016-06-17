@@ -39,7 +39,7 @@ SharrrePlatform.register("digg", function (options) {
         tracking: function () {
             //if somenone find a solution, mail me !
             /*$(this.element).find('.digg').on('click', function(){
-             _gaq.push(['_trackSocial', 'digg', 'add']);
+             ga('send', 'social', 'digg', 'add');
              });*/
         },
         popup: function (opt) {

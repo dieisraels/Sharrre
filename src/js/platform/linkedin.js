@@ -38,7 +38,7 @@ SharrrePlatform.register("linkedin", function (options) {
         },
         tracking: function () {
             function LinkedInShare() {
-                _gaq.push(['_trackSocial', 'linkedin', 'share']);
+                ga('send', 'social', 'linkedin', 'share');
             }
         },
         popup: function (opt) {

@@ -49,7 +49,7 @@ SharrrePlatform.register("twitter", function (options) {
                 if (typeof twttr !== 'undefined') {
                     twttr.events.bind('tweet', function (event) {
                         if (event) {
-                            _gaq.push(['_trackSocial', 'twitter', 'tweet']);
+                            ga('send', 'social', 'twitter', 'tweet');
                         }
                     });
                     clearInterval(tw);

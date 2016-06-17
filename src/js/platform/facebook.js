@@ -66,13 +66,13 @@ SharrrePlatform.register("facebook", function (options) {
             fb = window.setInterval(function () {
                 if (typeof FB !== 'undefined') {
                     FB.Event.subscribe('edge.create', function (targetUrl) {
-                        _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+                        ga('send', 'social', 'facebook', 'like', targetUrl);
                     });
                     FB.Event.subscribe('edge.remove', function (targetUrl) {
-                        _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
+                        ga('send', 'social', 'facebook', 'unlike', targetUrl);
                     });
                     FB.Event.subscribe('message.send', function (targetUrl) {
-                        _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
+                        ga('send', 'social', 'facebook', 'send', targetUrl);
                     });
                     //console.log('ok');
                     clearInterval(fb);

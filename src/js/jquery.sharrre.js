@@ -244,7 +244,7 @@
         this.platforms[site].popup(this.options);  //open
         if (this.options.enableTracking === true) { //tracking!
             infos = this.platforms[site].trackingAction;
-            _gaq.push(['_trackSocial', infos.site, infos.action]);
+            ga('send', 'social', infos.site, infos.action);
         }
     };
 
