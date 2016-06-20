@@ -58,7 +58,8 @@
         // Load enabled platforms
         $.each(self.options.share, function (name, val) {
             if (val === true) {
-                self.platforms[name] = SharrrePlatform.get(name, self.options.buttons[name]);
+                var options = (typeof self.options.buttons == 'undefined') ? {} : self.options.buttons[name];
+                self.platforms[name] = SharrrePlatform.get(name, options);
             }
         });
 
